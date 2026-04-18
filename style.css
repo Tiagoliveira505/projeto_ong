@@ -6,8 +6,19 @@
   font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* CABEÇALHO */
 .header {
+  /* O header flutua sobre o próximo elemento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
   display: flex; /* coloca itens lado a lado */
   justify-content: space-between; /* separa logo e menu */
   align-items: center; /* centraliza verticalmente */
@@ -104,6 +115,36 @@
   border-radius: 20px;
   color: white !important;
 }
+
+/*===========================*/
+/*SECTION HERO*/
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/36746078/pexels-photo-36746078.jpeg');
+    background-size: cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+    animation: fadeUp 1s ease;
+}
+
+.hero p {
+    margin-top: 10px;
+    animation: fadeUp 1.5s ease;
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+/*===========================*/
 
 /* ========================= */
 /* 📱 MOBILE */
