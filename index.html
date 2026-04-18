@@ -1,117 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONG Mãos Solidárias</title>
 
+  <!-- Faz o site se adaptar ao tamanho da tela (ESSENCIAL para mobile) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pastoral da Caridade</title>
+
+  <!-- Importa o CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header>
-    <div class="logo">ONG Mãos Solidárias</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav id="menu">
-      <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#doacoes" class="btn-menu">Doar</a>
-    </nav>
-  </header>
+<!-- Cabeçalho do site -->
+<header class="header">
 
-  <section id="inicio" class="hero">
+  <!-- Logo -->
+  <div class="logo-area">
+    <div class="logo-icon">❤</div> <!-- ícone -->
+    <h1 class="logo-title">Pastoral da Caridade</h1> <!-- nome -->
+  </div>
 
-    <div class="iconHero">❤️Transformando Vidas com Amor</div>
+  <!-- Botão hamburguer (só aparece no celular) -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
 
-    <h1>Juntos Pela Solidariedade</h1>
+  <!-- Menu -->
+  <nav class="menu" id="menu">
 
-    <p>Levando esperança e dignidade para famílias em situação de vulnerabilidade através da fé e do amor ao próximo</p>
+    <!-- Itens do menu -->
+    <div class="menu-item"><a href="#">Sobre Nós</a></div>
+    <div class="menu-item"><a href="#">Apadrinhar</a></div>
+    <div class="menu-item"><a href="#">Presentear</a></div>
 
-    <div class="buttons">
-      <a href="#sobre" class="btn">Saiba Mais</a>
-      <a href="#doacoes" class="btn">Faça uma Doação</a>
-    </div>
+    <div class="menu-item"><a href="#">Momentos</a></div>
 
-    <button class="setaSection">
-      <a href="#sobre">↓</a>
-    </button>
+    <!-- Botão destaque -->
+    <a href="#" class="btn">Doar</a>
+  </nav>
 
-  </section>
+</header>
 
-  <section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>Levamos alimentos, roupas e esperança para pessoas em situação de rua.</p>
-    <div class="cards">
-      <div class="card">+100 famílias ajudadas</div>
-      <div class="card">Campanhas mensais</div>
-      <div class="card">Voluntários ativos</div>
-    </div>
-  </section>
+<!-- Script dos bonecos -->
+<script src="index.js"></script>
 
-  <section id="eventos">
-    <h2>Eventos</h2>
-    <div class="cards">
-      <div class="card">Distribuição de alimentos</div>
-      <div class="card">Campanha do agasalho</div>
-      <div class="card">Ações solidárias</div>
-    </div>
-  </section>
+<!-- Script do menu mobile -->
+<script>
+const toggle = document.getElementById("menu-toggle"); // botão ☰
+const menu = document.getElementById("menu"); // menu
 
-  <section id="doacoes" class="doacoes">
-    <h2>Faça uma Doação</h2>
-    <p>Escolha um valor ou pague via PIX</p>
-
-    <div class="valores">
-      <div class="valor">R$10</div>
-      <div class="valor">R$25</div>
-      <div class="valor">R$50</div>
-      <div class="valor">R$100</div>
-    </div>
-
-    <div class="pix-box">
-      <strong>PIX:</strong><br>
-      email@ong.com<br>
-      (ou escaneie o QR Code futuramente)
-    </div>
-
-    <form onsubmit="enviarDoacao(event)">
-      <input type="text" placeholder="Seu nome" required>
-      <input type="email" placeholder="Seu email" required>
-      <input type="number" placeholder="Valor da doação" required>
-      <select>
-        <option>PIX</option>
-        <option>Cartão</option>
-        <option>Boleto</option>
-      </select>
-      <button type="submit">Doar Agora</button>
-    </form>
-
-  </section>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('active');
-    }
-
-    function enviarDoacao(e) {
-      e.preventDefault();
-      alert('Obrigado pela sua doação ❤️');
-    }
-
-    const elements = document.querySelectorAll('section');
-    window.addEventListener('scroll', () => {
-      elements.forEach(el => {
-        const pos = el.getBoundingClientRect().top;
-        if (pos < window.innerHeight - 100) {
-          el.style.animation = 'fadeUp 1s ease';
-        }
-      });
-    });
-  </script>
+// quando clicar no botão
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active"); // adiciona/remove classe (abre/fecha)
+});
+</script>
 
 </body>
-
 </html>
