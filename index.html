@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
 
@@ -11,51 +12,84 @@
   <!-- Importa o CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Cabeçalho do site -->
-<header class="header">
+  <!-- Cabeçalho do site -->
+  <header class="header">
 
-  <!-- Logo -->
-  <div class="logo-area">
-    <div class="logo-icon">❤</div> <!-- ícone -->
-    <h1 class="logo-title">Pastoral da Caridade</h1> <!-- nome -->
-  </div>
+    <!-- Logo -->
+    <div class="logo-area">
+      <div class="logo-icon">❤</div> <!-- ícone -->
+      <h1 class="logo-title">Pastoral da Caridade</h1> <!-- nome -->
+    </div>
 
-  <!-- Botão hamburguer (só aparece no celular) -->
-  <div class="menu-toggle" id="menu-toggle">
-    ☰
-  </div>
+    <!-- Botão hamburguer (só aparece no celular) -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
 
-  <!-- Menu -->
-  <nav class="menu" id="menu">
+    <!-- Menu -->
+    <nav class="menu" id="menu">
 
-    <!-- Itens do menu -->
-    <div class="menu-item"><a href="#">Sobre Nós</a></div>
-    <div class="menu-item"><a href="#">Apadrinhar</a></div>
-    <div class="menu-item"><a href="#">Presentear</a></div>
+      <!-- Itens do menu -->
+      <div class="menu-item"><a href="#">Sobre Nós</a></div>
+      <div class="menu-item"><a href="#">Apadrinhar</a></div>
+      <div class="menu-item"><a href="#">Presentear</a></div>
 
-    <div class="menu-item"><a href="#">Momentos</a></div>
+      <div class="menu-item"><a href="#">Momentos</a></div>
 
-    <!-- Botão destaque -->
-    <a href="#" class="btn">Doar</a>
-  </nav>
+      <!-- Botão destaque -->
+      <a href="#" class="btn">Doar</a>
+    </nav>
 
-</header>
+  </header>
 
-<!-- Script dos bonecos -->
-<script src="index.js"></script>
+  <!-- Script para icones -->
+  <script src="https://kit.fontawesome.com/78c68c91f5.js" crossorigin="anonymous"></script>
 
-<!-- Script do menu mobile -->
-<script>
-const toggle = document.getElementById("menu-toggle"); // botão ☰
-const menu = document.getElementById("menu"); // menu
+  <!-- Script dos bonecos -->
+  <script src="index.js"></script>
 
-// quando clicar no botão
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("active"); // adiciona/remove classe (abre/fecha)
-});
-</script>
+  <!-- Script do menu mobile -->
+  <script>
+    const toggle = document.getElementById("menu-toggle"); // botão ☰
+    const menu = document.getElementById("menu"); // menu
+
+    // quando clicar no botão
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active"); // adiciona/remove classe (abre/fecha)
+    });
+  </script>
+
+  <section id="inicio" class="hero">
+
+    <div class="iconHero">
+      
+      <!-- Icone coração -->
+      <i class="fa-solid fa-hand-holding-heart" style="color: rgb(252, 253, 254);"></i>Transformando Vidas com Amor
+    </div>
+    
+
+    <h1>Juntos Pela Solidariedade</h1>
+
+    <p>Levando esperança e dignidade para famílias em situação de vulnerabilidade através da fé e do amor ao próximo</p>
+
+    <div class="buttons">
+      <a href="#sobre" class="btn">Saiba Mais</a>
+      <a href="#doacoes" class="btn">Faça uma Doação</a>
+    </div>
+
+    <button class="setaSection">
+      <a href="#sobre">
+        
+        <!-- Icone seta para baixo -->
+        <i class="fa-solid fa-arrow-down" style="color: rgb(0, 0, 0);"></i>
+      </a>
+    </button>
+
+  </section>
 
 </body>
+
 </html>
