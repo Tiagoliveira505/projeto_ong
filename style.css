@@ -118,6 +118,11 @@ html {
 
 /*===========================*/
 /*SECTION HERO*/
+.section .hero {
+    padding: 100px 10px;
+    text-align: center;
+}
+
 .hero {
     height: 100vh;
     display: flex;
@@ -125,25 +130,61 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/36746078/pexels-photo-36746078.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0), #d7621a58), url('https://images.pexels.com/photos/36746078/pexels-photo-36746078.jpeg');
     background-size: cover;
     color: white;
 }
 
+.iconHero {
+    font-size: 17px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: #ff7300;
+    padding: 12px;
+    border-radius: 50px;
+}
+
 .hero h1 {
-    font-size: 40px;
+    font-size: 65px;
     animation: fadeUp 1s ease;
+    padding-bottom: 10px;
+}
+
+/*Animação de escrever*/
+#typewriter {
+    border-right: 2px solid rgb(255, 136, 0); /* O cursor */
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 .hero p {
     margin-top: 10px;
+    font-size: 25px;
+    text-align: center;
     animation: fadeUp 1.5s ease;
+    margin-bottom: 10px;
 }
 
-section {
-    padding: 100px 20px;
-    text-align: center;
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
 }
+.buttons a{
+    gap: 20px;
+    animation: fadeUp 2s ease;
+
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 136, 0);
+    text-decoration: none;
+    
+}
+
 /*===========================*/
 
 /* ========================= */
@@ -187,4 +228,24 @@ section {
     margin-top: 10px;
     text-align: center;
   }
+}
+
+/* 1. Define a animação */
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Move 20px para cima */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 2. Aplica ao elemento desejado */
+.seta {
+  margin-top: 50px;
+  font-size: 25px;
+  animation: flutuar 3s ease-in-out infinite;
 }
