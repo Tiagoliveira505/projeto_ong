@@ -76,3 +76,9 @@ footer {
     /* Ajusta a altura específica do último doador no celular */
     .destaque .borda-viva { height: 250px; } 
 }
+
+.logo-title {
+  text-decoration: none; /* remove sublinhado */
+  color: inherit; /* mantém cor */
+  font-weight: bold; /* 🔥 deixa em negrito */
+}

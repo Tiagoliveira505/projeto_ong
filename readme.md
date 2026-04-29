@@ -9,3 +9,6 @@ Versão 0.3
 
 Versão 0.4
     fiz a página de doações.
+
+Versão 0.5
+    adicionei a parte "sobre nos" ( feita por eu e cadu ).
